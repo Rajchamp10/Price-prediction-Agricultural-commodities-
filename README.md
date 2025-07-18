@@ -76,6 +76,12 @@ Predicted_Price: ₹48.15
 
 ---
 
+## 🖼️ Demo Screenshot
+
+![Web App Screenshot]()
+![Web App Screenshot]()
+
+
 ## Acknowledgements
 
 Developed as part of a Smart India Hackathon prototype
