@@ -69,25 +69,26 @@ Agripricepredictor/
 
 
 
-OUTPUT:
+## OUTPUT:
+```
 Predicted_Price: ₹48.15
-
-Screenshots :
-<img width="920" height="841" alt="Screenshot 2025-07-18 221559" src="https://github.com/user-attachments/assets/e3491954-3e57-45fe-8ab3-8fa22c9885f6" />
+```
 
 
-
-✨ Acknowledgements
+##✨ Acknowledgements
+```
 Developed as part of a Smart India Hackathon prototype
 
 Dataset inspired by agricultural market monitoring systems
 
 Mentorship & guidance from ChatGPT
+```
 
-
-Future Improvements
+## Future Improvements
+```
 Model accuracy improvement (hyperparameter tuning)
 
 Add live charts using Chart.js
 
 Deploy the app on Render/Heroku or Docker
+```
