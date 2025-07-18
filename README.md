@@ -68,13 +68,13 @@ Agripricepredictor/
 }
 
 
-
+```
 ## OUTPUT:
-```
+
 Predicted_Price: ₹48.15
+
+
 ```
-
-
 ##✨ Acknowledgements
 ```
 Developed as part of a Smart India Hackathon prototype
