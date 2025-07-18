@@ -88,7 +88,7 @@ Mentorship & guidance from ChatGPT
 
 ## Future Improvements
 ```
----
+
 Model accuracy improvement (hyperparameter tuning)
 
 Add live charts using Chart.js
