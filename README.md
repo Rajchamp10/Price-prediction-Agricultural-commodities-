@@ -15,7 +15,7 @@ A complete end-to-end Machine Learning web application that predicts the price o
 ---
 
 ## 🏗️ Project Structure
-
+```
 Agripricepredictor/
 │
 ├── app/
@@ -31,7 +31,7 @@ Agripricepredictor/
 ├── requirements.txt # List of Python dependencies
 └── README.md # This file
 
-
+```
 
 
 ---
@@ -71,6 +71,10 @@ Agripricepredictor/
 
 OUTPUT:
 Predicted_Price: ₹48.15
+
+Screenshots :
+<img width="920" height="841" alt="Screenshot 2025-07-18 221559" src="https://github.com/user-attachments/assets/e3491954-3e57-45fe-8ab3-8fa22c9885f6" />
+
 
 
 ✨ Acknowledgements
