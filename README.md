@@ -77,14 +77,14 @@ Predicted_Price: ₹48.15
 ---
 
 ##✨Acknowledgements
-```
+
 ---
 Developed as part of a Smart India Hackathon prototype
 
 Dataset inspired by agricultural market monitoring systems
 
 Mentorship & guidance from ChatGPT
-```
+
 ---
 
 ## Future Improvements
