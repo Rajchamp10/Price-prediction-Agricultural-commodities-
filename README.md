@@ -77,10 +77,10 @@ Predicted_Price: ₹48.15
 ---
 
 ## 🖼️ Demo Screenshot
-```
+
 ![Web App Screenshot](https://github.com/Rajchamp10/Price-prediction-Agricultural-commodities-/blob/main/Screenshot%202025-07-18%20221559.png)
 ![Web App Screenshot](https://github.com/Rajchamp10/Price-prediction-Agricultural-commodities-/blob/main/Screenshot%202025-07-18%20221618.png)
-```
+
 ---
 
 ## Acknowledgements
