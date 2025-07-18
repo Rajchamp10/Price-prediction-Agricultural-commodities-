@@ -1,0 +1,20 @@
+# Ignore model files and large binaries
+model/
+*.pkl
+
+# Ignore virtual environments
+venv/
+venv311/
+
+# Ignore system/IDE files
+.DS_Store
+*.pyc
+__pycache__/
+*.log
+
+# Ignore VS Code settings (optional)
+.vscode/
+
+# Ignore test artifacts or temp files
+*.tmp
+*.swp

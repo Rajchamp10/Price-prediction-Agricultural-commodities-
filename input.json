@@ -1,0 +1,17 @@
+{
+  "State": "West Bengal",
+  "District": "Kolkata",
+  "Commodity": "Onion",
+  "Season": "Winter",
+  "Temperature (°C)": 24,
+  "Rainfall (mm)": 20,
+  "Supply Volume (tons)": 500,
+  "Demand Volume (tons)": 550,
+  "Transportation Cost (₹/kg)": 2,
+  "Fertilizers Used (tons)": 100,
+  "Pest Infestation": 1,
+  "Market Competition": 8,
+  "Year": 2022,
+  "Month": 12,
+  "Day": 20
+}

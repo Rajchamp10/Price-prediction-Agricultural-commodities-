@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agri Price Predictor</title>
+  <style>
+    body {
+      background: #e8f8f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .form-wrapper {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #27ae60;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #1e8449;
+    }
+
+    #result {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2d3436;
+      text-align: center;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌾 Agri Price Predictor</h1>
+    <div class="form-wrapper">
+      <form id="predictForm">
+        <label>State: <input type="text" name="State" required></label>
+        <label>District: <input type="text" name="District" required></label>
+        <label>Commodity: <input type="text" name="Commodity" required></label>
+        <label>Season: <input type="text" name="Season" required></label>
+        <label>Temperature (°C): <input type="number" name="Temperature (°C)" required></label>
+        <label>Rainfall (mm): <input type="number" name="Rainfall (mm)" required></label>
+        <label>Supply Volume (tons): <input type="number" name="Supply Volume (tons)" required></label>
+        <label>Demand Volume (tons): <input type="number" name="Demand Volume (tons)" required></label>
+        <label>Transportation Cost (₹/kg): <input type="number" name="Transportation Cost (₹/kg)" required></label>
+        <label>Fertilizers Used (tons): <input type="number" name="Fertilizers Used (tons)" required></label>
+        <label>Pest Infestation: <input type="number" name="Pest Infestation" required></label>
+        <label>Market Competition: <input type="number" name="Market Competition" required></label>
+        <label>Year: <input type="number" name="Year" required></label>
+        <label>Month: <input type="number" name="Month" required></label>
+        <label>Day: <input type="number" name="Day" required></label>
+        <button type="submit">Predict Price</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('predictForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const jsonData = {};
+
+      formData.forEach((value, key) => {
+        jsonData[key] = isNaN(value) ? value : parseFloat(value);
+      });
+
+      try {
+        const response = await fetch('/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(jsonData)
+        });
+
+        const result = await response.json();
+        resultDiv.innerText = `📈 Predicted Price: ₹${result.Predicted_Price.toFixed(2)}`;
+      } catch (error) {
+        resultDiv.innerText = ' Error occurred while predicting.';
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>
