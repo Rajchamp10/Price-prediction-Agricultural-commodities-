@@ -1,6 +1,7 @@
 # 🌾 Agri Price Predictor
 
 A complete end-to-end Machine Learning web application that predicts the price of agricultural commodities like Onion, Potato, Chickpeas, etc., based on environmental and market factors. Built using Random Forest, Flask, and a custom HTML frontend.
+This was a trial project for Smart India Hackathon 2024. The model performance needs further betterment 
 
 ---
 
